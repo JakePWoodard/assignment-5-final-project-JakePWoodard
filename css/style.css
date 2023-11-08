@@ -1,0 +1,217 @@
+/* GLOBAL ELEMENTS */
+
+html {
+  box-sizing: border-box;
+  background-color: #EBF4F4;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: komet, sans-serif;
+  font-size: 1.875rem;
+  color: #1F2833;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
+
+}
+
+h2 {
+  font-family: komet, sans-serif;
+  font-weight: 800;
+  font-size: 5rem
+}
+
+h3 {
+  font-family: komet, sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+/* NAVIGATION */
+
+.header {
+  background-color: #1F2833 ;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 3.5625rem;
+  width: 100%;
+  position: fixed
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  column-gap: 20rem;
+  align-items: center;
+}
+
+.nav a {
+  color: #EBF4F4;
+  text-transform: uppercase;
+  font-family: komet-sc, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  font-family: cabin-sketch-regular, sans-serif;
+  font-size: 2rem;
+}
+
+/* HOME PAGE CSS */
+
+.hub {
+  display: grid;
+}
+
+video.fullscreen {
+	top:0;
+	width: 100%;
+	background-color: #EBF4F4;
+	object-fit: cover;
+}
+
+.me {
+  position: absolute;
+  top:25rem;
+  left: 33rem;
+  text-align: center;
+  
+}
+ 
+.bioSection {
+  display: flex;
+  background-color: #1F2833;
+  width: 100%;
+  min-height: 44.0625rem;
+  color: #EBF4F4;
+  text-align: left;
+  padding: 15rem;
+}
+
+.whyandhow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  background-color: #EBF4F4;
+  width: 100%;
+  min-height: 60rem;
+}
+
+.whyandhow img {
+  height: 65rem;
+  width: 36.503rem;
+}
+
+.headshot {
+  display: grid;
+}
+
+.tileStack {
+  display: grid;
+  margin: 8rem 10rem 10rem 6rem;
+}
+
+.about h4 {
+  margin: 0 0 2rem 0;
+}
+
+/* FORM ELEMENTS */
+
+form {
+  background-color: #1F2833;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 10rem;
+  color: #EBF4F4;
+}
+
+.formColumn h3 {
+  width: 50.625rem;
+}
+
+.formColumn ul {
+  line-height: 5rem;
+  list-style: none;
+  margin: 4rem 0 4rem 0;
+  font-family: komet-sc, sans-serif;
+  font-weight: 400;
+  font-size: 3.125rem;
+  letter-spacing: 0.46875rem;
+  color: #EBF4F4;
+}
+
+.icons {
+  height: 59px;
+  position: relative;
+  top: .8rem;
+
+}
+
+label {
+
+}
+
+input[type=text] {
+  margin:rem;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+  border-radius: 0.625rem;
+  width: 100%;
+  height: 4.3125rem;
+}
+
+/* PROCESS PAGE CSS */
+
+.largerSize {
+  position: relative;
+	top:0;
+	width: 100%;
+	background-color: #EBF4F4;
+	object-fit: cover;
+}
+
+
+
+/* Name and Bio 
+.me {
+  position: absolute;
+  align-items: center;
+  margin: 15rem;
+}
+*/
+
+.projectColumn {
+  display: grid;
+}
+
+.partofitMini {
+  width: 22.188rem;
+}
+
+.candlelightMini {
+  width: 22.188rem;
+}
+
+.partofitMain {
+  width: 22.188rem;
+}
+
+.candlelightMain {
+  width: 22.188rem;
+}
