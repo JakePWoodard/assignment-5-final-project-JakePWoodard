@@ -2,7 +2,7 @@
 
 html {
   box-sizing: border-box;
-  background-color: #EBF4F4;
+  background-color: #5BABA9;
   cursor: url('../images/icons8-3d-pointer-30.png'), auto;
 }
 
@@ -72,7 +72,7 @@ h3 {
 
 video.fullscreen {
   position: relative;
-  top: 57px;
+  top: 3.563rem;
   display: grid;
 	width: 100%;
 	background-color: #EBF4F4;
@@ -220,12 +220,89 @@ textarea {
 /* PROCESS PAGE CSS */
 
 .largerSize {
+  top: 20rem;
   position: relative;
-	top:0;
 	width: 100%;
+  height: 85rem;
 	background-color: #EBF4F4;
 	object-fit: cover;
+  filter: grayscale(100%);
 }
+
+.mainProcess {
+  background-color: #f3f3f3;
+}
+
+.processShowcase a {
+  cursor: pointer;
+
+}
+
+.processShowcase a:visited {
+  color: #1F2833;
+}
+
+.processShowcase a:hover {
+  color: #5BABA9;
+}
+
+/* PROCESS IMAGE ASSETS */
+
+.crossword {
+  height: 74.66238rem;
+  position: absolute;
+  inset: 8rem;
+  left: 10rem;
+}
+
+.terriblefate-mini {
+  position: absolute;
+  inset: 8rem;
+  height: 25rem;
+  box-shadow: 3rem 3rem;
+  margin-left: 14rem;
+}
+
+.auora {
+  position: absolute;
+  inset: 28rem;
+  margin-left: 57.3rem;
+  box-shadow: #1F2833 3rem 3rem;
+}
+
+.screenprint {
+  position: absolute;
+  inset: 20rem;
+  margin-top: 31.5rem;
+  left: 16rem;
+  box-shadow: -3rem 3rem;
+}
+
+/* PROCESS PINS */
+
+.terriblePin {
+  position: absolute;
+  inset: 9rem;
+  margin-left: 31.5rem;
+  height: 1.20rem;
+}
+
+.auroraPin {
+  position: absolute;
+  inset: 30rem;
+  margin-left: 42rem;
+  height: 1.20rem;
+}
+
+.screenPin {
+  position: absolute;
+  inset: 10rem;
+  margin-top: 38rem;
+  left: 20rem;
+  transform: rotate(270deg);
+  height: 1.20rem;
+}
+/* DESIGN PAGE CSS */
 
 .projectColumn {
   display: grid;
@@ -245,4 +322,12 @@ textarea {
 
 .candlelightMain {
   width: 22.188rem;
+}
+
+/* SCREENPRINT PAGE */
+
+.projectDisplay {
+  display: flex;
+  position: relative;
+  background-color: #1F2833
 }
