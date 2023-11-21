@@ -35,6 +35,12 @@ h3 {
   font-weight: 400;
   font-size: 3rem;
 }
+
+h4 {
+  margin: 0 0 2rem 0;
+}
+
+
 /* NAVIGATION */
 
 .header {
@@ -45,6 +51,7 @@ h3 {
   height: 3.5625rem;
   width: 100%;
   position: fixed;
+  z-index: 9999;
 }
 
 .nav ul {
@@ -70,10 +77,10 @@ h3 {
 
 /* HOME PAGE CSS */
 
+
 video.fullscreen {
   position: relative;
   top: 3.563rem;
-  display: grid;
 	width: 100%;
 	background-color: #EBF4F4;
 	object-fit: cover;
@@ -84,7 +91,35 @@ video.fullscreen {
   inset: 25rem;
   text-align: center;
 }
- 
+
+.arrows {
+  position: absolute;
+  display: grid;
+  inset: 28rem 0rem 2rem 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 30rem;
+}
+
+.leftArrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0rem;
+}
+
+.downArrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(270deg);
+  margin: 28rem;
+}
+
+.rightArrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(180deg);
+  margin: 0rem 0rem 0rem 19rem;
+}
+
 .bioSection {
   display: flex;
   background-color: #1F2833;
@@ -117,11 +152,6 @@ video.fullscreen {
   display: grid;
   margin: 8rem 10rem 5rem 6rem;
 }
-
-.about h4 {
-  margin: 0 0 2rem 0;
-}
-
 /* FORM ELEMENTS */
 
 form {
@@ -150,23 +180,23 @@ form {
 
 .formColumn a {
   text-decoration: none;
-  color: #EBF4F4;
+  color: #5BABA9;
 }
 
 .formColumn a:hover {
   text-decoration: none;
-  color: #5BABA9;
+  color: #EBF4F4;
 }
 svg {
   height: 59px;
   position: relative;
   top: .8rem;
-  fill: #EBF4F4;
+  fill: #5BABA9;
 
 }
 
 svg:hover {
-  fill: #5BABA9;
+  fill: #EBF4F4;
 }
 
 label {
@@ -207,16 +237,20 @@ textarea {
 .submit {
   width: 6rem;
   height: 3.125rem;
-  flex-shrink: 0;
   border-radius: 0.625rem;
   background: #EBF4F4;
-  margin-left: 45rem;
+  margin: .5rem 0 0 45rem;
   color: rgba(0, 0, 0, 0.33);
   font-family: komet-sc, sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
   cursor: pointer;
 }
+
+.processForm {
+margin-top: 19rem;
+}
+
 /* PROCESS PAGE CSS */
 
 .largerSize {
@@ -247,6 +281,14 @@ textarea {
 }
 
 /* PROCESS IMAGE ASSETS */
+
+.processleftArrow {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 26rem 0 0 0rem;
+  inset: 3rem;
+}
 
 .crossword {
   height: 74.66238rem;
@@ -328,6 +370,104 @@ textarea {
 
 .projectDisplay {
   display: flex;
-  position: relative;
-  background-color: #1F2833
+  top: 57px;
+  background-color: #1F2833;
+  padding: 1rem;
+  justify-content: center;
+  height: 63rem;
+}
+
+.projectImage {
+  margin: 8rem 5rem 5rem 2rem;
+  height: 43rem;
+}
+
+.nextbar {
+  position: absolute;
+  inset: 55rem;
+  color: #EBF4F4;
+  margin: 2rem 0rem 0rem 30rem;
+}
+
+.nextbar h4 {
+font-family: komet, sans-serif;
+font-weight: 400;
+font-style: normal;
+letter-spacing: .2rem;
+}
+
+.casestudyGrid {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr;
+  background-color: #EBF4F4;
+  width: 100%;
+  min-height: 50rem;
+}
+
+.casestudyGrid  p {
+ margin-bottom: 2rem;
+}
+
+.casestudyGrid  h4 {
+ margin-top: 3rem;
+ }
+
+.silkscreenSketch {
+  display: flex;
+  position: absolute;
+  width: 55rem;
+  margin: 5rem;
+}
+.screenprint-inclass {
+  display: grid;
+  width: 40rem;
+  height: 60rem;
+  
+}
+
+.processType {
+  display: grid;
+  margin: 13rem 2rem 5rem 13rem;
+}
+
+/* AIGA POSTER PAGE */
+
+.relientkposter {
+  margin: 8rem 5rem 5rem 2rem;
+  height: 43rem;
+}
+
+.partofitGrid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  background-color: #EBF4F4;
+  height: 50rem;
+}
+
+.partofit-zoomed {
+  height: 50rem;
+}
+.textContent {
+  margin: 9.8rem;
+  line-height: 2.8125rem;
+}
+
+.textContent2 {
+  margin: 8rem;
+  line-height: 2.8125rem;
+}
+
+
+.candlelightGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #EBF4F4;
+  height: 50rem;
+}
+
+.candlelight-zoomed {
+  height: 50rem;
 }
