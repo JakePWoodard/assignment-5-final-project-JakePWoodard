@@ -346,16 +346,55 @@ margin-top: 19rem;
 }
 /* DESIGN PAGE CSS */
 
-.projectColumn {
-  display: grid;
+.carousel {
+margin: 0rem 20rem 0rem 0rem;
+position: relative;
+
 }
 
-.partofitMini {
-  width: 22.188rem;
+.tiles {
+  align-items: ;
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+  display: flex;
+  gap: 8rem;
+  /*
+  overflow: hidden;
+  */
 }
 
-.candlelightMini {
-  width: 22.188rem;
+.cards a {
+  cursor: pointer;
+}
+.cards {
+  min-width: 45.743rem;
+  background-color: #1F2833;
+  padding: 2.625rem;
+  height: 100%;
+}
+
+/* do i need this and the class in html */
+
+.slide {
+  display: flex;
+  flex: 0 0 2rem;
+}
+.cardtitle {
+  background-color: #1F2833;
+  position: relative;
+  border-top: 2rem solid #5BABA9;
+}
+.cardtitle h4 {
+  display: flex;
+  color: #EBF4F4;
+  justify-content: center;
+  font-family: komet-sc, sans-serif;
+  font-size: 2.5rem;
+
+}
+.relientkPosters {
+  width: 44rem;
 }
 
 .partofitMain {
@@ -366,6 +405,13 @@ margin-top: 19rem;
   width: 22.188rem;
 }
 
+.londonPoster {
+  width: 19.82rem;
+}
+
+.glasgowPoster {
+  width: 14.82rem;
+}
 /* SCREENPRINT PAGE */
 
 .projectDisplay {
