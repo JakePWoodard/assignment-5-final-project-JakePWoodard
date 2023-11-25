@@ -373,13 +373,24 @@ position: relative;
 
 }
 
+.carouselBottom {
+margin-bottom: 2rem;
+}
+
 .carousel h1 {
+  color: rgb(31, 40, 51, 0.5);
   text-align: center;
-  margin-bottom: 2rem
+  margin: 0 0 2rem 17rem;
+
+}
+
+.carouselV2 h1 {
+  color: rgb(31, 40, 51, 0.5);
+  text-align: center;
+  margin: 2rem 0 2rem 17rem;
 }
 
 .tiles {
-  align-items: ;
   list-style: none;
   padding: 0 1rem;
   margin: 0;
@@ -397,7 +408,7 @@ position: relative;
   display: flex;
   justify-content: center;
   width: 49.25rem;
-  height: 44.25rem;
+  height: 37.25rem;
   background-color: #1F2833;
   padding: 2.625rem;
 }
@@ -413,30 +424,51 @@ position: relative;
 
 .cardtitle {
   position: relative;
-  border-top: 1rem solid #5BABA9;
+  border-top: 1rem solid #EBF4F4;
+  height: 5rem;
   width: 100%;
+  background-color: #1F2833;
 }
+
 .cardtitle h4 {
   display: flex;
+  align-items: center;
   color: #EBF4F4;
   justify-content: center;
   font-family: komet-sc, sans-serif;
   font-size: 2.5rem;
 
 }
+
+.cardtitle a {
+  color: #EBF4F4;
+  text-decoration: none;
+
+ /* CAROUSEL IMAGES */
+
+}
 .relientkPosters {
   width: 44rem;
-  padding-bottom: 3rem;
 }
 
 .londonPoster {
   width: 19.82rem;
-  padding-bottom: 3rem;
 }
 
 .glasgowPoster {
   width: 14.82rem;
-  padding-bottom: 3rem;
+}
+
+.bookcovers-comingsoon {
+ width: 44rem;
+}
+
+.unfaahdCatalog {
+  width: 44rem;
+}
+
+.instrumentalguitarBook {
+  width: 44rem;
 }
 /* SCREENPRINT PAGE */
 
