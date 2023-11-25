@@ -100,6 +100,11 @@ video.fullscreen {
   height: 30rem;
 }
 
+/* Might be better in java script 
+.arrows a:hover {
+ background: url(../images/sketchy-carat.svg) no-repeat;
+}
+*/
 .leftArrow {
   width: 1.5rem;
   height: 1.5rem;
@@ -240,11 +245,22 @@ textarea {
   border-radius: 0.625rem;
   background: #EBF4F4;
   margin: .5rem 0 0 45rem;
+  text-align: center;
   color: rgba(0, 0, 0, 0.33);
   font-family: komet-sc, sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
   cursor: pointer;
+}
+
+.submit:hover {
+  border: 3px solid #5BABA9;
+  font-family: cabin-sketch-regular, sans-serif;
+  text-transform: uppercase;
+}
+
+.submit:active {
+  border: 3px solid #5BABA9;
 }
 
 .processForm {
@@ -346,10 +362,20 @@ margin-top: 19rem;
 }
 /* DESIGN PAGE CSS */
 
+.designwork {
+  background-color: #EBF4F4;
+  padding-top: 5rem;
+}
+
 .carousel {
 margin: 0rem 20rem 0rem 0rem;
 position: relative;
 
+}
+
+.carousel h1 {
+  text-align: center;
+  margin-bottom: 2rem
 }
 
 .tiles {
@@ -368,22 +394,27 @@ position: relative;
   cursor: pointer;
 }
 .cards {
-  min-width: 45.743rem;
+  display: flex;
+  justify-content: center;
+  width: 49.25rem;
+  height: 44.25rem;
   background-color: #1F2833;
   padding: 2.625rem;
-  height: 100%;
 }
 
-/* do i need this and the class in html */
+/* do i need this and the class in html 
 
 .slide {
   display: flex;
   flex: 0 0 2rem;
 }
+
+*/
+
 .cardtitle {
-  background-color: #1F2833;
   position: relative;
-  border-top: 2rem solid #5BABA9;
+  border-top: 1rem solid #5BABA9;
+  width: 100%;
 }
 .cardtitle h4 {
   display: flex;
@@ -395,22 +426,17 @@ position: relative;
 }
 .relientkPosters {
   width: 44rem;
-}
-
-.partofitMain {
-  width: 22.188rem;
-}
-
-.candlelightMain {
-  width: 22.188rem;
+  padding-bottom: 3rem;
 }
 
 .londonPoster {
   width: 19.82rem;
+  padding-bottom: 3rem;
 }
 
 .glasgowPoster {
   width: 14.82rem;
+  padding-bottom: 3rem;
 }
 /* SCREENPRINT PAGE */
 
