@@ -115,14 +115,14 @@ video.fullscreen {
   width: 1.5rem;
   height: 1.5rem;
   transform: rotate(270deg);
-  margin: 28rem;
+  margin: 29rem 0 0 14rem;
 }
 
 .rightArrow {
   width: 1.5rem;
   height: 1.5rem;
   transform: rotate(180deg);
-  margin: 0rem 0rem 0rem 19rem;
+  margin: 0rem 0rem 0rem 30rem;
 }
 
 .bioSection {
@@ -365,45 +365,70 @@ margin-top: 19rem;
 .designwork {
   background-color: #EBF4F4;
   padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.designvideo1 {
+  top: 10rem;
+right: 40rem;
+  position: absolute;
+	width: 100%;
+  height: 40rem;
+  mix-blend-mode: luminosity;
+	background-color: #EBF4F4;
+  filter: grayscale(100%);
+  transform: scaleX(-1) rotate(270deg);
+}
+
+.designvideo2 {
+  top: 60rem;
+  left: 50rem;
+  position: absolute;
+	width: 100%;
+  height: 40rem;
+  mix-blend-mode: luminosity;
+	background-color: #EBF4F4;
+  filter: grayscale(100%);
+  transform: rotate(290deg);
 }
 
 .carousel {
-margin: 0rem 20rem 0rem 0rem;
-position: relative;
-
+  max-width: 53rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1.5rem;
 }
 
 .carouselBottom {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .carousel h1 {
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
-  margin: 0 0 2rem 17rem;
+  margin-bottom: 2rem;
 
 }
 
 .carouselV2 h1 {
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
-  margin: 2rem 0 2rem 17rem;
+  margin: 2rem 0;
 }
 
 .tiles {
   list-style: none;
-  padding: 0 1rem;
   margin: 0;
   display: flex;
   gap: 8rem;
-  /*
   overflow: hidden;
-  */
 }
 
 .cards a {
   cursor: pointer;
 }
+
 .cards {
   display: flex;
   justify-content: center;
@@ -412,6 +437,7 @@ margin-bottom: 2rem;
   background-color: #1F2833;
   padding: 2.625rem;
 }
+
 
 /* do i need this and the class in html 
 
@@ -435,21 +461,55 @@ margin-bottom: 2rem;
   align-items: center;
   color: #EBF4F4;
   justify-content: center;
+  margin-top: 0.2rem;
   font-family: komet-sc, sans-serif;
   font-size: 2.5rem;
-
 }
 
 .cardtitle a {
   color: #EBF4F4;
   text-decoration: none;
+}
 
+.carouselArrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.previous {
+  left: 0rem; 
+}
+
+.next {
+  right: 0rem;
+}
+
+.pagination {
+  position: absolute;
+  margin: .92rem 0 0 41rem;
+}
+.pagination li {
+  position: relative;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 .3rem;
+  background-color: #EBF4F4;
+  border-radius: 1rem;
+  opacity: 20%;
+  cursor: pointer;
+}
+
+li.active {
+ opacity: 1;
+ background-color: #5BABA9;
+}
  /* CAROUSEL IMAGES */
-
-}
-.relientkPosters {
-  width: 44rem;
-}
 
 .londonPoster {
   width: 19.82rem;
@@ -459,17 +519,11 @@ margin-bottom: 2rem;
   width: 14.82rem;
 }
 
-.bookcovers-comingsoon {
- width: 44rem;
+.horizontalThumbnail {
+  width: 44rem;
+  height: 32rem;
 }
 
-.unfaahdCatalog {
-  width: 44rem;
-}
-
-.instrumentalguitarBook {
-  width: 44rem;
-}
 /* SCREENPRINT PAGE */
 
 .projectDisplay {
@@ -523,11 +577,11 @@ letter-spacing: .2rem;
   width: 55rem;
   margin: 5rem;
 }
+
 .screenprint-inclass {
   display: grid;
   width: 40rem;
   height: 60rem;
-  
 }
 
 .processType {
@@ -553,6 +607,7 @@ letter-spacing: .2rem;
 .partofit-zoomed {
   height: 50rem;
 }
+
 .textContent {
   margin: 9.8rem;
   line-height: 2.8125rem;
@@ -562,7 +617,6 @@ letter-spacing: .2rem;
   margin: 8rem;
   line-height: 2.8125rem;
 }
-
 
 .candlelightGrid {
   display: grid;
