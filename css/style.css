@@ -421,7 +421,6 @@ right: 40rem;
   list-style: none;
   margin: 0;
   display: flex;
-  gap: 8rem;
   overflow: hidden;
 }
 
@@ -432,7 +431,7 @@ right: 40rem;
 .cards {
   display: flex;
   justify-content: center;
-  width: 49.25rem;
+  width: 50rem;
   height: 37.25rem;
   background-color: #1F2833;
   padding: 2.625rem;
@@ -488,11 +487,19 @@ right: 40rem;
 .next {
   right: 0rem;
 }
-
+/*
 .pagination {
   position: absolute;
   margin: .92rem 0 0 41rem;
 }
+*/
+
+.pagination {
+  position: absolute;
+  margin: 47.35rem 0 0 41rem;
+  z-index: 1;
+}
+
 .pagination li {
   position: relative;
   display: inline-block;

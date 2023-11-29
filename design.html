@@ -32,6 +32,11 @@
   <!-- CAROUSEL 1 -->
 
   <section class="carousel">
+    <ul class="pagination">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+    </ul>
     <button type="button" class="carouselArrow previous"><img src="images/sketchy-carat-left.svg"></button>
     <button type="button" class="carouselArrow next"><img src="images/sketchy-carat-right.svg"></button>
   <h1>ILLUSTRATION</h1>
@@ -43,11 +48,6 @@
       </a>
        </div> 
        <div class="cardtitle">
-        <ul class="pagination">
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-        </ul>
         <h4><a href="aiga-poster-casestudy.html">aiga poster project</a></h4>
         </div>
     </li>
@@ -57,7 +57,7 @@
         <a href="kewgardens-poster-casestudy.html"><img src="images/woodard-londonunderground-poster.jpg" class="londonPoster" alt="poster featuring Kew Gardens for the London Underground"></a>
       </div>
       <div class="cardtitle">
-        <h4><a href="kewgardens-poster-casestudy.html">london underground poster</a></h4>
+        <h4><a href="kewgardens-poster-casestudy.html">london underground</a></h4>
         </div>
     </li>
 
@@ -76,6 +76,13 @@
 <!-- CAROUSEL 2 -->
 
 <section class="carousel carouselV2">
+  <ul class="pagination">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <button type="button" class="carouselArrow previous"><img src="images/sketchy-carat-left.svg"></button>
+  <button type="button" class="carouselArrow next"><img src="images/sketchy-carat-right.svg"></button>
   <h1>PUBLICATION</h1>
   <ul class="tiles">
     <li class="slide">
@@ -111,6 +118,13 @@
 <!-- CAROUSEL 3 -->
 
 <section class="carousel carouselV2 carouselBottom">
+  <ul class="pagination">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <button type="button" class="carouselArrow previous"><img src="images/sketchy-carat-left.svg"></button>
+  <button type="button" class="carouselArrow next"><img src="images/sketchy-carat-right.svg"></button>
   <h1>BRANDING</h1>
   <ul class="tiles">
     <li class="slide">
@@ -222,21 +236,21 @@
   <script>
     var previousButton, nextButton;
     var carouselContainer, cards, pageDots;
-    var leftSlideIndex = 0;
+    var leftSlideIndex = 0; 
 
-    window.addEventListener('DOMContentLoaded', function(e) {
+    window.addEventListener('DOMContentLoaded', function (e) {
       previousButton = document.querySelector('.previous');
       nextButton = document.querySelector('.next');
       carouselContainer = document.querySelector('.tiles');
-      cards = document.querySelector('slide');
-      pageDots = document.querySelector(.pagination li);
+      cards = carouselContainer.querySelectorAll('.slide');
+      pageDots = document.querySelectorAll('.pagination li');
       
       previousButton.addEventListener('click', previousSlide);
       nextButton.addEventListener('click', nextSlide);
 
       pageDots.forEach(function (dot) {
-        dot.addEventListener('click', function(e){
-          goToSlide(Array,prototype.slice.call(pageDots).index0f(e.target));
+        dot.addEventListener('click', function (e) {
+          goToSlide(Array.prototype.slice.call(pageDots).indexOf(e.target)); 
         });
       });
     });
