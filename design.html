@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/bhc5ohe.css">
-  <script src="https://kit.fontawesome.com/6efcccf7fa.js" crossorigin="anonymous"></script>
   <title>Design</title>
 </head>
 <body>
@@ -217,6 +216,59 @@
     </div>
 
   </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   
+  <script>
+    var previousButton, nextButton;
+    var carouselContainer, cards, pageDots;
+    var leftSlideIndex = 0;
+
+    window.addEventListener('DOMContentLoaded', function(e) {
+      previousButton = document.querySelector('.previous');
+      nextButton = document.querySelector('.next');
+      carouselContainer = document.querySelector('.tiles');
+      cards = document.querySelector('slide');
+      pageDots = document.querySelector(.pagination li);
+      
+      previousButton.addEventListener('click', previousSlide);
+      nextButton.addEventListener('click', nextSlide);
+
+      pageDots.forEach(function (dot) {
+        dot.addEventListener('click', function(e){
+          goToSlide(Array,prototype.slice.call(pageDots).index0f(e.target));
+        });
+      });
+    });
+
+    function previousSlide () {
+      if (leftSlideIndex > 0) {
+        goToSlide(leftSlideIndex - 1);
+      } else {
+        goToSlide(cards.length - 1);
+      }
+    }
+
+    function nextSlide() {
+      if (leftSlideIndex < cards.length - 1) { goToSlide(leftSlideIndex + 1);
+      } else {
+        goToSlide(0);
+      }
+    }
+    
+    function goToSlide(nextLeftSlideIndex) {
+      $(carouselContainer).animate({
+        scrollLeft: carouselContainer.offsetWidth / 1 * nextLeftSlideIndex },
+        {
+          duration: 200});
+      pageDots.forEach(function (dot){
+        dot.classList.remove('active');
+      });
+
+      pageDots[nextLeftSlideIndex].classList.add('active');
+
+      leftSlideIndex = nextLeftSlideIndex;
+    }
+  </script>
 </body>
 </html>
