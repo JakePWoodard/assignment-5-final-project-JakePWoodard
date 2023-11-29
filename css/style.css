@@ -438,16 +438,6 @@ right: 40rem;
   padding: 2.625rem;
 }
 
-
-/* do i need this and the class in html 
-
-.slide {
-  display: flex;
-  flex: 0 0 2rem;
-}
-
-*/
-
 .cardtitle {
   position: relative;
   border-top: 1rem solid #EBF4F4;
