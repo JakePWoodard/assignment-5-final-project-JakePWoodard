@@ -12,6 +12,12 @@ html {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'sketchy';
+  src: url(../fonts/sketchy-font.otf);
+  font-style: normal;
+  font-weight: 100;
+}
 body {
   font-family: komet, sans-serif;
   font-size: 1.875rem;
@@ -21,13 +27,13 @@ body {
 h1 {
   font-weight: bold;
   font-size: 5rem;
-
 }
 
 h2 {
   font-family: komet, sans-serif;
   font-weight: 800;
-  font-size: 5rem
+  font-size: 5rem;
+  mix-blend-mode: luminosity;
 }
 
 h3 {
@@ -64,15 +70,17 @@ h4 {
 .nav a {
   color: #EBF4F4;
   text-transform: uppercase;
-  font-family: komet-sc, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-family: sketchy;
   text-decoration: none;
+  letter-spacing: .2rem;
+  transition: 0.3s ease;
 }
 
 .nav a:hover {
-  font-family: cabin-sketch-regular, sans-serif;
+  transform: scale(2rem);
+  font-family: sketchy;
   font-size: 2rem;
+  color: #5BABA9;
 }
 
 /* HOME PAGE CSS */
@@ -92,6 +100,13 @@ video.fullscreen {
   text-align: center;
 }
 
+.firstandlast {
+  transition: 0.3s ease;
+}
+.firstandlast:hover {
+  transform: scale(1.1);
+}
+
 .arrows {
   position: absolute;
   display: grid;
@@ -100,6 +115,10 @@ video.fullscreen {
   height: 30rem;
 }
 
+
+:focus {
+  outline: solid #5BABA9;
+}
 /* Might be better in java script 
 .arrows a:hover {
  background: url(../images/sketchy-carat.svg) no-repeat;
@@ -174,7 +193,6 @@ form {
 }
 
 .formColumn ul {
-  line-height: 5rem;
   list-style: none;
   margin: 4rem 0 4rem 0;
   font-family: komet-sc, sans-serif;
@@ -251,16 +269,13 @@ textarea {
   font-size: 1.25rem;
   font-weight: 300;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .submit:hover {
   border: 3px solid #5BABA9;
   font-family: cabin-sketch-regular, sans-serif;
   text-transform: uppercase;
-}
-
-.submit:active {
-  border: 3px solid #5BABA9;
 }
 
 .processForm {
@@ -281,6 +296,7 @@ margin-top: 19rem;
 
 .mainProcess {
   background-color: #f3f3f3;
+  transform: scale(2rem);
 }
 
 .processShowcase a {
@@ -294,15 +310,16 @@ margin-top: 19rem;
 
 .processShowcase a:hover {
   color: #5BABA9;
+  transition: 0.3s ease;
 }
 
 /* PROCESS IMAGE ASSETS */
 
 .processleftArrow {
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 26rem 0 0 0rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 24.8rem 0 0 0rem;
   inset: 3rem;
 }
 
@@ -361,6 +378,16 @@ margin-top: 19rem;
   height: 1.20rem;
 }
 /* DESIGN PAGE CSS */
+
+.designrightArrow {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 24.8rem 0 0 100.5rem;
+  transform: rotate(180deg);
+  inset: 3rem;
+  z-index: 2;
+}
 
 .designwork {
   background-color: #EBF4F4;
@@ -471,8 +498,8 @@ right: 40rem;
 }
 
 .carouselArrow {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background-color: transparent;
   border: none;
   position: absolute;
@@ -482,10 +509,12 @@ right: 40rem;
 
 .previous {
   left: 0rem; 
+  margin-left: 1.89rem;
 }
 
 .next {
   right: 0rem;
+  margin-right: 1.89rem;
 }
 /*
 .pagination {
@@ -497,7 +526,7 @@ right: 40rem;
 .pagination {
   position: absolute;
   margin: 47.35rem 0 0 41rem;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .pagination li {
@@ -543,7 +572,7 @@ li.active {
 }
 
 .projectImage {
-  margin: 8rem 5rem 5rem 2rem;
+  margin: 8rem 2.5rem 5rem 2.5rem;
   height: 43rem;
 }
 
@@ -551,15 +580,24 @@ li.active {
   position: absolute;
   inset: 55rem;
   color: #EBF4F4;
-  margin: 2rem 0rem 0rem 30rem;
+  margin: 2rem 0rem 0rem 32.5rem;
+  cursor: pointer;
 }
 
 .nextbar h4 {
-font-family: komet, sans-serif;
-font-weight: 400;
-font-style: normal;
+font-family: sketchy;
+font-size: 3rem;
 letter-spacing: .2rem;
 }
+
+.nextbar a:hover {
+  color: #5BABA9;
+  font-size: 3.2rem
+  }
+  .nextbar a {
+    text-decoration: none;
+    color: #EBF4F4;
+  }
 
 .casestudyGrid {
   display: grid;
@@ -599,7 +637,7 @@ letter-spacing: .2rem;
 /* AIGA POSTER PAGE */
 
 .relientkposter {
-  margin: 8rem 5rem 5rem 2rem;
+  margin: 8rem 2.5rem 5rem 2.5rem;
   height: 43rem;
 }
 
