@@ -4,6 +4,7 @@ html {
   box-sizing: border-box;
   background-color: #5BABA9;
   cursor: url('../images/icons8-3d-pointer-30.png'), auto;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -14,7 +15,7 @@ html {
 
 @font-face {
   font-family: 'sketchy';
-  src: url(../fonts/sketchy-font.otf);
+  src: url(../fonts/sketchy-font.ttf);
   font-style: normal;
   font-weight: 100;
 }
@@ -46,7 +47,9 @@ h4 {
   margin: 0 0 2rem 0;
 }
 
-
+a:visited {
+  color: #1F2833;
+}
 /* NAVIGATION */
 
 .header {
@@ -85,7 +88,6 @@ h4 {
 
 /* HOME PAGE CSS */
 
-
 video.fullscreen {
   position: relative;
   top: 3.563rem;
@@ -98,12 +100,18 @@ video.fullscreen {
   position: absolute;
   inset: 25rem;
   text-align: center;
+  z-index: 3;
 }
 
-.firstandlast {
+.me a {
+  text-decoration: none;
+}
+
+.firstandlast, .designer {
   transition: 0.3s ease;
 }
-.firstandlast:hover {
+
+.firstandlast:hover, .designer:hover {
   transform: scale(1.1);
 }
 
@@ -119,11 +127,7 @@ video.fullscreen {
 :focus {
   outline: solid #5BABA9;
 }
-/* Might be better in java script 
-.arrows a:hover {
- background: url(../images/sketchy-carat.svg) no-repeat;
-}
-*/
+
 .leftArrow {
   width: 1.5rem;
   height: 1.5rem;
@@ -176,6 +180,7 @@ video.fullscreen {
   display: grid;
   margin: 8rem 10rem 5rem 6rem;
 }
+
 /* FORM ELEMENTS */
 
 form {
@@ -197,31 +202,38 @@ form {
   margin: 4rem 0 4rem 0;
   font-family: komet-sc, sans-serif;
   font-weight: 400;
-  font-size: 3.125rem;
-  letter-spacing: 0.46875rem;
+  font-size: 2.125rem;
+  letter-spacing: 0.2rem;
 }
 
 .formColumn a {
   text-decoration: none;
   color: #5BABA9;
+  transition: 0.3s ease;
 }
 
 .formColumn a:hover {
   text-decoration: none;
   color: #EBF4F4;
+  transform: scale(6rem);
+  font-size: 2.5rem;
 }
 svg {
-  height: 59px;
+  height: 30px;
   position: relative;
-  top: .8rem;
+  top: .37rem;
   fill: #5BABA9;
-
+  transition: 0.3s ease;
 }
 
 svg:hover {
   fill: #EBF4F4;
+  transform: scale(1.1);
 }
 
+.workwithme {
+  margin-bottom: 2rem;
+}
 label {
   color: #EBF4F4;
   font-family: komet, sans-serif;
@@ -238,7 +250,6 @@ input[type=text] {
 input {
   padding: 1rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
   border-radius: 0.625rem;
   width: 100%;
   height: 4.3125rem;
@@ -301,7 +312,6 @@ margin-top: 19rem;
 
 .processShowcase a {
   cursor: pointer;
-
 }
 
 .processShowcase a:visited {
@@ -465,7 +475,6 @@ right: 40rem;
   overflow: hidden;
 }
 
-
 .cards a {
   cursor: pointer;
 }
@@ -478,16 +487,6 @@ right: 40rem;
   background-color: #1F2833;
   padding: 2.625rem;
 }
-
-
-/* do i need this and the class in html 
-
-.slide {
-  display: flex;
-  flex: 0 0 2rem;
-}
-
-*/
 
 .cardtitle {
   position: relative;
@@ -505,8 +504,13 @@ right: 40rem;
   margin-top: 0.2rem;
   font-family: komet-sc, sans-serif;
   font-size: 2.5rem;
+  transition: 0.3s ease;
 }
 
+.cardtitle h4:hover {
+  font-size: 2.6rem;
+  transform: scale(1);
+}
 .cardtitle a {
   color: #EBF4F4;
   text-decoration: none;
@@ -554,25 +558,24 @@ right: 40rem;
   cursor: pointer;
 }
 
-
 li.active {
  opacity: 1;
  background-color: #5BABA9;
 }
  /* CAROUSEL IMAGES */
 
-.londonPoster {
-  width: 19.82rem;
-}
-
-.glasgowPoster {
-  width: 14.82rem;
-}
-
 .horizontalThumbnail {
   width: 44rem;
   height: 32rem;
+  transition: 0.3s ease;
 }
+
+.horizontalThumbnail:hover {
+  width: 44.5rem;
+  height: 32.5rem;
+  transform: scale(1);
+}
+
 
 /* SCREENPRINT PAGE */
 
@@ -687,4 +690,24 @@ letter-spacing: .2rem;
 
 .candlelight-zoomed {
   height: 50rem;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation {
+  display: flex;
+  background-color: #1F2833;
+  height: 100rem;
+  width: 100%;
+  color: #EBF4F4;
+  padding: 15rem;
+}
+.return {
+  position: absolute;
+  inset: 0;
+  margin: 3rem 0rem 0rem 49rem;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  mix-blend-mode: luminosity;
 }

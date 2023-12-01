@@ -21,8 +21,8 @@
     <video playsinline autoplay muted="images/sand-still.png" class="fullscreen" src="images/colored-sand.mp4" alt="animated background sequence of teal-colored sand floating and dispersing around the main screen">
     </video>
       <div class="me">
-        <h2 class="firstandlast">JAKE&nbspWOODARD</h2>
-          <h3>GRAPHIC&nbspDESIGNER</h3>
+        <h2 class="firstandlast"><a href="#headshot">JAKE&nbspWOODARD</a></h2>
+          <h3 class="designer">GRAPHIC&nbspDESIGNER</h3>
       </div>
 
       <div class="arrows">
@@ -40,13 +40,12 @@
 
   </div>
 
-  <div class="mainColumn">
     <div class=bioSection>
       <h3>“I'm Jake Woodard, a graphic designer merging traditional and digital media to craft clever concepts and captivating designs.”</h3>
     </div>
     
       <div class="whyandhow">
-        <div class="headshot">
+        <div class="headshot" id="headshot">
           <img src="images/headshot.jpg" alt="picture of handsome young italian-american man looking rretrospectively through a bright green hedge">
         </div>
         <div class="about">
@@ -128,6 +127,9 @@
           <div class="insertName">
           <input id="yourName" name="yourName" type="text" placeholder="Your Name">
           </div>
+          <div class="insertEmail">
+            <input id="yourEmail" name="yourEmail" type="email" placeholder="Your Email">
+            </div>
           <textarea id="textInquiry" name="inquiry" placeholder="Write a brief explanation of your request"></textarea>
           <div class="formButton">
           <button class="submit" type="submit">submit</button>
@@ -135,6 +137,14 @@
         </div>
 
       </form>
-  </div>
+<script>
+
+  const headerText = document.querySelector('.firstandlast');
+
+    headerText.addEventListener('click', () => {
+      headerText.classList.toggle('flipped');
+    });
+
+  </script>
 </body>
 </html>
