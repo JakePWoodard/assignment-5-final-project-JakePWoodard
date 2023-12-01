@@ -444,12 +444,27 @@ right: 40rem;
   margin: 2rem 0;
 }
 
-.tiles {
+.illustrationCarousel {
   list-style: none;
   margin: 0;
   display: flex;
   overflow: hidden;
 }
+
+.publicationCarousel {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.brandingCarousel {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
 
 .cards a {
   cursor: pointer;
@@ -507,39 +522,38 @@ right: 40rem;
   cursor: pointer;
 }
 
-.previous {
+/* CAROUSEL PREVIOUS ARROWS */
+
+.previousIllustration, .previousPublication, .previousBranding {
   left: 0rem; 
   margin-left: 1.89rem;
 }
 
-.next {
+/* CAROUSEL NEXT ARROWS */
+
+.nextIllustration, .nextPublication, .nextBranding {
   right: 0rem;
   margin-right: 1.89rem;
 }
-/*
-.pagination {
-  position: absolute;
-  margin: .92rem 0 0 41rem;
-}
-*/
 
-.pagination {
+.paginationIllustration, .paginationBranding, .paginationPublication {
   position: absolute;
-  margin: 47.35rem 0 0 41rem;
+  margin: 47.35rem 0 0 43rem;
   z-index: 1000;
 }
 
-.pagination li {
+.paginationIllustration li, .paginationPublication li, .paginationBranding li {
   position: relative;
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0 .3rem;
+  margin: 0 0rem;
   background-color: #EBF4F4;
   border-radius: 1rem;
   opacity: 20%;
   cursor: pointer;
 }
+
 
 li.active {
  opacity: 1;
