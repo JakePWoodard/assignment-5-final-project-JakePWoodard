@@ -120,6 +120,7 @@ video.fullscreen {
   inset: 25rem;
   text-align: center;
   z-index: 3;
+  animation: fadeIn 3s;
 }
 
 .me a {
@@ -330,6 +331,10 @@ margin-top: 19rem;
   transform: scale(2rem);
 }
 
+.processShowcase {
+  animation: fadeIn 3s;
+}
+
 .processShowcase a {
   cursor: pointer;
 }
@@ -426,6 +431,15 @@ margin-top: 19rem;
   overflow: hidden;
 }
 
+.sandonside {
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .designvideo1 {
   top: 10rem;
 right: 40rem;
@@ -455,6 +469,7 @@ right: 40rem;
   margin: 0 auto;
   position: relative;
   padding: 0 1.5rem;
+  animation: fadeIn 1s;
 }
 
 .carouselBottom {
@@ -465,6 +480,7 @@ right: 40rem;
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
   margin-bottom: 2rem;
+  mix-blend-mode: normal;
 
 }
 
@@ -472,6 +488,7 @@ right: 40rem;
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
   margin: 2rem 0;
+  mix-blend-mode: normal;
 }
 
 .illustrationCarousel {
@@ -673,9 +690,11 @@ letter-spacing: .2rem;
 
 /* AIGA POSTER PAGE */
 
-.relientkposter {
+.projectImage {
   margin: 8rem 2.5rem 5rem 2.5rem;
   height: 43rem;
+  animation: fadeIn 3s;
+
 }
 
 .partofitGrid {
