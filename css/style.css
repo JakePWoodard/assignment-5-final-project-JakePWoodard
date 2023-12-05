@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   background-color: #5BABA9;
-  cursor: url('../images/icons8-3d-pointer-30.png'), auto;
+  cursor: url('../images/icons8-3d-pointer-30.png'), auto; /* added this cursor to fit the theme of my sketchy handdrawn style */
   scroll-behavior: smooth;
 }
 
@@ -91,7 +91,8 @@ a:focus {
   align-items: center;
 }
 
-.nav a {
+.nav a { 
+  /* added a transtions to smoothen out the transformation when you hover */
   color: #EBF4F4;
   text-transform: uppercase;
   font-family: sketchy;
@@ -100,7 +101,8 @@ a:focus {
   transition: 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover { 
+  /* added a transform element to my hover state so that the links feel more lively */
   transform: scale(2);
   font-family: sketchy;
   font-size: 2rem;
@@ -138,7 +140,8 @@ video.fullscreen {
   transform: scale(1.1);
 }
 
-.arrows {
+.arrows { 
+  /* made a arrows into a grid so that they can be equadistant from each other */
   position: absolute;
   display: grid;
   inset: 28rem 0rem 2rem 3rem;
@@ -146,7 +149,8 @@ video.fullscreen {
   height: 30rem;
 }
 
-:focus {
+:focus { 
+  /* made my focus teal blue to match my design library */
   outline: solid #5BABA9;
 }
 
@@ -234,7 +238,8 @@ form {
   transition: 0.3s ease;
 }
 
-.formColumn a:hover {
+.formColumn a:hover { 
+  /* added hover states to form links to enhance user experience and entice viewers to click on my social media links */
   text-decoration: none;
   color: #EBF4F4;
   transform: scale(6);
@@ -249,7 +254,8 @@ svg {
   transition: 0.3s ease;
 }
 
-svg:hover {
+svg:hover { 
+  /* also added the hover state animation to the svg's so that they transform woth the form column */
   fill: #EBF4F4;
   transform: scale(1.1);
 }
@@ -315,7 +321,8 @@ margin-top: 19rem;
 
 /* PROCESS PAGE CSS */
 
-.largerSize {
+.largerSize { 
+  /* converted the image to grayscale instead of reuploading a grayscale gif to save on file size */
   top: 20rem;
   position: relative;
 	width: 100%;
@@ -356,7 +363,8 @@ margin-top: 19rem;
   inset: 3rem;
 }
 
-.crossword {
+.crossword { 
+  /* made this an absolute element so that the crossword can float in the center */
   height: 74.66238rem;
   position: absolute;
   inset: 8rem;
@@ -423,18 +431,21 @@ margin-top: 19rem;
   z-index: 2;
 }
 
-.designwork {
+.designwork { 
+  /* added overflow:hidden to my css to stop my video elements from breaching the desktop size */
   background-color: #EBF4F4;
   padding-top: 5rem;
   position: relative;
   overflow: hidden;
 }
 
-.sandonside {
+.sandonside { 
+  /* added fade in elements for the sand on the side so it loads in smoothly */
   animation: fadeIn 1.5s;
 }
 
-.designvideo1 {
+.designvideo1 { 
+  /* used tranform to rotate the gif so that i didnt have to use a seperate gif for each background element */
   top: 10rem;
   right: 40rem;
   position: absolute;
@@ -521,7 +532,7 @@ margin-top: 19rem;
 
 .cardtitle {
   position: relative;
-  border-top: 1rem solid #EBF4F4;
+  border-top: 1rem solid #EBF4F4; /* used a border to create the illustion of a space so that its easier on code and the javascript */
   height: 5rem;
   width: 100%;
   background-color: #1F2833;
@@ -597,16 +608,17 @@ li.active {
 
  /* CAROUSEL IMAGES */
 
-.horizontalThumbnail {
+.horizontalThumbnail { 
+  /* made all of the thumbnail images on the carousel the same size. Reminder: To replace an image simply place the design in a 44rem by 32rem file and export it as png */ 
   width: 44rem;
   height: 32rem;
-  transition: 0.3s ease;
+  transition: 0.3s ease; /* added an ease to smooth out hover state */
 }
 
 .horizontalThumbnail:hover {
   width: 44.5rem;
   height: 32.5rem;
-  transform: scale(1);
+  transform: scale(1); /* added scale trandormation to indicate to user that they can press the image */
 }
 
 /* SCREENPRINT PAGE */
@@ -625,7 +637,8 @@ li.active {
   height: 43rem;
 }
 
-.nextbar {
+.nextbar { 
+  /* for future purposes this link will eventually take you to the next process or project page */
   position: absolute;
   inset: 55rem;
   color: #EBF4F4;
@@ -692,15 +705,11 @@ letter-spacing: .2rem;
   animation: fadeIn 3s;
 }
 
-.partofitGrid {
+.partofitGrid { /* grids for the project pages two represent the 2 case study paragraphs about the specific project */
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
   background-color: #EBF4F4;
-  height: 50rem;
-}
-
-.partofit-zoomed {
   height: 50rem;
 }
 
@@ -722,7 +731,7 @@ letter-spacing: .2rem;
   height: 50rem;
 }
 
-.candlelight-zoomed {
+.zoomed {
   height: 50rem;
 }
 
@@ -737,19 +746,20 @@ letter-spacing: .2rem;
   padding: 15rem;
 }
 
-.return {
+.return { /* used to direct the user back to my home page */
   position: absolute;
   inset: 0;
   margin: 3rem 0 0 51rem;
   width: 4rem;
   height: 4rem;
   transform: rotate(90deg);
-  mix-blend-mode: luminosity;
+  mix-blend-mode: luminosity; /* added a blending mode to make gif black and white */
 }
 
 /* KEYFRAMES */ 
 
-@keyframes fadeIn {
+@keyframes fadeIn { 
+  /* keyfames to tell animations to fade into view when the page loads */
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
