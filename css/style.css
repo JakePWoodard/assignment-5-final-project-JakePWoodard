@@ -3,13 +3,21 @@
 html {
   box-sizing: border-box;
   background-color: #5BABA9;
-  cursor: url('../images/icons8-3d-pointer-30.png'), auto;
+  cursor: url('../images/icons8-3d-pointer-30.png'), auto; /* added this cursor to fit the theme of my sketchy handdrawn style */
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: 'sketchy';
+  src: url(../fonts/sketchy-font.ttf);
+  font-style: normal;
+  font-weight: 100;
 }
 
 body {
@@ -21,13 +29,13 @@ body {
 h1 {
   font-weight: bold;
   font-size: 5rem;
-
 }
 
 h2 {
   font-family: komet, sans-serif;
   font-weight: 800;
-  font-size: 5rem
+  font-size: 5rem;
+  mix-blend-mode: luminosity;
 }
 
 h3 {
@@ -40,6 +48,28 @@ h4 {
   margin: 0 0 2rem 0;
 }
 
+/* LINKS */
+
+a {
+  color: #EBF4F4;
+}
+
+a:visited {
+  color: #1F2833;
+}
+
+a:hover {
+  color: #5BABA9;
+}
+
+a:active {
+  color: #5BABA9
+}
+
+a:focus {
+  color: #5BABA9;
+  font-weight: bold;
+}
 
 /* NAVIGATION */
 
@@ -61,22 +91,25 @@ h4 {
   align-items: center;
 }
 
-.nav a {
+.nav a { 
+  /* added a transtions to smoothen out the transformation when you hover */
   color: #EBF4F4;
   text-transform: uppercase;
-  font-family: komet-sc, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-family: sketchy;
   text-decoration: none;
+  letter-spacing: .2rem;
+  transition: 0.3s ease;
 }
 
-.nav a:hover {
-  font-family: cabin-sketch-regular, sans-serif;
+.nav a:hover { 
+  /* added a transform element to my hover state so that the links feel more lively */
+  transform: scale(2);
+  font-family: sketchy;
   font-size: 2rem;
+  color: #5BABA9;
 }
 
 /* HOME PAGE CSS */
-
 
 video.fullscreen {
   position: relative;
@@ -90,9 +123,25 @@ video.fullscreen {
   position: absolute;
   inset: 25rem;
   text-align: center;
+  z-index: 3;
+  animation: fadeIn 3s;
 }
 
-.arrows {
+.me a {
+  text-decoration: none;
+  color: #1F2833;
+}
+
+.firstandlast, .designer {
+  transition: 0.3s ease;
+}
+
+.firstandlast:hover, .designer:hover {
+  transform: scale(1.1);
+}
+
+.arrows { 
+  /* made a arrows into a grid so that they can be equadistant from each other */
   position: absolute;
   display: grid;
   inset: 28rem 0rem 2rem 3rem;
@@ -100,15 +149,15 @@ video.fullscreen {
   height: 30rem;
 }
 
-/* Might be better in java script 
-.arrows a:hover {
- background: url(../images/sketchy-carat.svg) no-repeat;
+:focus { 
+  /* made my focus teal blue to match my design library */
+  outline: solid #5BABA9;
 }
-*/
+
 .leftArrow {
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0rem;
+  margin: 0;
 }
 
 .downArrow {
@@ -122,7 +171,7 @@ video.fullscreen {
   width: 1.5rem;
   height: 1.5rem;
   transform: rotate(180deg);
-  margin: 0rem 0rem 0rem 30rem;
+  margin: 0 0 0 30rem;
 }
 
 .bioSection {
@@ -158,6 +207,7 @@ video.fullscreen {
   display: grid;
   margin: 8rem 10rem 5rem 6rem;
 }
+
 /* FORM ELEMENTS */
 
 form {
@@ -175,34 +225,44 @@ form {
 }
 
 .formColumn ul {
-  line-height: 5rem;
   list-style: none;
   margin: 4rem 0 4rem 0;
   font-family: komet-sc, sans-serif;
   font-weight: 400;
-  font-size: 3.125rem;
-  letter-spacing: 0.46875rem;
+  font-size: 2.125rem;
+  letter-spacing: 0.2rem;
 }
 
 .formColumn a {
   text-decoration: none;
   color: #5BABA9;
+  transition: 0.3s ease;
 }
 
-.formColumn a:hover {
+.formColumn a:hover { 
+  /* added hover states to form links to enhance user experience and entice viewers to click on my social media links */
   text-decoration: none;
   color: #EBF4F4;
+  transform: scale(6);
+  font-size: 2.5rem;
 }
+
 svg {
-  height: 59px;
+  height: 30px;
   position: relative;
-  top: .8rem;
+  top: .37rem;
   fill: #5BABA9;
-
+  transition: 0.3s ease;
 }
 
-svg:hover {
+svg:hover { 
+  /* also added the hover state animation to the svg's so that they transform woth the form column */
   fill: #EBF4F4;
+  transform: scale(1.1);
+}
+
+.workwithme {
+  margin-bottom: 2rem;
 }
 
 label {
@@ -214,14 +274,9 @@ label {
   letter-spacing: 0.375rem;
 }
 
-input[type=text] {
-  margin:rem;
-}
-
 input {
   padding: 1rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
   border-radius: 0.625rem;
   width: 100%;
   height: 4.3125rem;
@@ -247,11 +302,12 @@ textarea {
   background: #EBF4F4;
   margin: .5rem 0 0 45rem;
   text-align: center;
-  color: rgba(0, 0, 0, 0.33);
+  color: #1F2833;
   font-family: komet-sc, sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .submit:hover {
@@ -260,17 +316,14 @@ textarea {
   text-transform: uppercase;
 }
 
-.submit:active {
-  border: 3px solid #5BABA9;
-}
-
 .processForm {
 margin-top: 19rem;
 }
 
 /* PROCESS PAGE CSS */
 
-.largerSize {
+.largerSize { 
+  /* converted the image to grayscale instead of reuploading a grayscale gif to save on file size */
   top: 20rem;
   position: relative;
 	width: 100%;
@@ -284,9 +337,12 @@ margin-top: 19rem;
   background-color: #f3f3f3;
 }
 
+.processShowcase {
+  animation: fadeIn 3s;
+}
+
 .processShowcase a {
   cursor: pointer;
-
 }
 
 .processShowcase a:visited {
@@ -295,19 +351,21 @@ margin-top: 19rem;
 
 .processShowcase a:hover {
   color: #5BABA9;
+  transition: 0.3s ease;
 }
 
 /* PROCESS IMAGE ASSETS */
 
 .processleftArrow {
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 26rem 0 0 0rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 24.8rem 0 0 0;
   inset: 3rem;
 }
 
-.crossword {
+.crossword { 
+  /* made this an absolute element so that the crossword can float in the center */
   height: 74.66238rem;
   position: absolute;
   inset: 8rem;
@@ -361,18 +419,36 @@ margin-top: 19rem;
   transform: rotate(270deg);
   height: 1.20rem;
 }
+
 /* DESIGN PAGE CSS */
 
-.designwork {
+.designrightArrow {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 24.8rem 0 0 100.5rem;
+  transform: rotate(180deg);
+  inset: 3rem;
+  z-index: 2;
+}
+
+.designwork { 
+  /* added overflow:hidden to my css to stop my video elements from breaching the desktop size */
   background-color: #EBF4F4;
   padding-top: 5rem;
   position: relative;
   overflow: hidden;
 }
 
-.designvideo1 {
+.sandonside { 
+  /* added fade in elements for the sand on the side so it loads in smoothly */
+  animation: fadeIn 1.5s;
+}
+
+.designvideo1 { 
+  /* used tranform to rotate the gif so that i didnt have to use a seperate gif for each background element */
   top: 10rem;
-right: 40rem;
+  right: 40rem;
   position: absolute;
 	width: 100%;
   height: 40rem;
@@ -399,26 +475,43 @@ right: 40rem;
   margin: 0 auto;
   position: relative;
   padding: 0 1.5rem;
+  animation: fadeIn 1s;
 }
 
 .carouselBottom {
   margin-bottom: 2rem;
 }
 
-.carousel h1 {
+.carousel h2 {
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
   margin-bottom: 2rem;
+  mix-blend-mode: normal;
 
 }
 
-.carouselV2 h1 {
+.carouselV2 h2 {
   color: rgb(31, 40, 51, 0.5);
   text-align: center;
   margin: 2rem 0;
+  mix-blend-mode: normal;
 }
 
-.tiles {
+.illustrationCarousel {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.publicationCarousel {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.brandingCarousel {
   list-style: none;
   margin: 0;
   display: flex;
@@ -438,25 +531,15 @@ right: 40rem;
   padding: 2.625rem;
 }
 
-
-/* do i need this and the class in html 
-
-.slide {
-  display: flex;
-  flex: 0 0 2rem;
-}
-
-*/
-
 .cardtitle {
   position: relative;
-  border-top: 1rem solid #EBF4F4;
+  border-top: 1rem solid #EBF4F4; /* used a border to create the illustion of a space so that its easier on code and the javascript */
   height: 5rem;
   width: 100%;
   background-color: #1F2833;
 }
 
-.cardtitle h4 {
+.cardtitle p {
   display: flex;
   align-items: center;
   color: #EBF4F4;
@@ -464,6 +547,12 @@ right: 40rem;
   margin-top: 0.2rem;
   font-family: komet-sc, sans-serif;
   font-size: 2.5rem;
+  transition: 0.3s ease;
+}
+
+.cardtitle p:hover {
+  font-size: 2.6rem;
+  transform: scale(1);
 }
 
 .cardtitle a {
@@ -472,8 +561,8 @@ right: 40rem;
 }
 
 .carouselArrow {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background-color: transparent;
   border: none;
   position: absolute;
@@ -481,32 +570,32 @@ right: 40rem;
   cursor: pointer;
 }
 
-.previous {
+/* CAROUSEL PREVIOUS ARROWS */
+
+.previousIllustration, .previousPublication, .previousBranding {
   left: 0rem; 
+  margin-left: 1.89rem;
 }
 
-.next {
+/* CAROUSEL NEXT ARROWS */
+
+.nextIllustration, .nextPublication, .nextBranding {
   right: 0rem;
-}
-/*
-.pagination {
-  position: absolute;
-  margin: .92rem 0 0 41rem;
-}
-*/
-
-.pagination {
-  position: absolute;
-  margin: 47.35rem 0 0 41rem;
-  z-index: 1;
+  margin-right: 1.89rem;
 }
 
-.pagination li {
+.paginationIllustration, .paginationBranding, .paginationPublication {
+  position: absolute;
+  margin: 47.35rem 0 0 43rem;
+  z-index: 1000;
+}
+
+.paginationIllustration li, .paginationPublication li, .paginationBranding li {
   position: relative;
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0 .3rem;
+  margin: 0;
   background-color: #EBF4F4;
   border-radius: 1rem;
   opacity: 20%;
@@ -517,19 +606,20 @@ li.active {
  opacity: 1;
  background-color: #5BABA9;
 }
+
  /* CAROUSEL IMAGES */
 
-.londonPoster {
-  width: 19.82rem;
-}
-
-.glasgowPoster {
-  width: 14.82rem;
-}
-
-.horizontalThumbnail {
+.horizontalThumbnail { 
+  /* made all of the thumbnail images on the carousel the same size. Reminder: To replace an image simply place the design in a 44rem by 32rem file and export it as png */ 
   width: 44rem;
   height: 32rem;
+  transition: 0.3s ease; /* added an ease to smooth out hover state */
+}
+
+.horizontalThumbnail:hover {
+  width: 44.5rem;
+  height: 32.5rem;
+  transform: scale(1); /* added scale trandormation to indicate to user that they can press the image */
 }
 
 /* SCREENPRINT PAGE */
@@ -544,23 +634,34 @@ li.active {
 }
 
 .projectImage {
-  margin: 8rem 5rem 5rem 2rem;
+  margin: 8rem 2.5rem 5rem 2.5rem;
   height: 43rem;
 }
 
-.nextbar {
+.nextbar { 
+  /* for future purposes this link will eventually take you to the next process or project page */
   position: absolute;
   inset: 55rem;
   color: #EBF4F4;
-  margin: 2rem 0rem 0rem 30rem;
+  margin: 2rem 0rem 0rem 32.5rem;
+  cursor: pointer;
 }
 
 .nextbar h4 {
-font-family: komet, sans-serif;
-font-weight: 400;
-font-style: normal;
+font-family: sketchy;
+font-size: 3rem;
 letter-spacing: .2rem;
 }
+
+.nextbar a:hover {
+  color: #5BABA9;
+  font-size: 3.2rem
+}
+
+.nextbar a {
+    text-decoration: none;
+    color: #EBF4F4;
+ }
 
 .casestudyGrid {
   display: grid;
@@ -599,20 +700,17 @@ letter-spacing: .2rem;
 
 /* AIGA POSTER PAGE */
 
-.relientkposter {
-  margin: 8rem 5rem 5rem 2rem;
+.projectImage {
+  margin: 8rem 2.5rem 5rem 2.5rem;
   height: 43rem;
+  animation: fadeIn 3s;
 }
 
-.partofitGrid {
+.partofitGrid { /* grids for the project pages two represent the 2 case study paragraphs about the specific project */
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
   background-color: #EBF4F4;
-  height: 50rem;
-}
-
-.partofit-zoomed {
   height: 50rem;
 }
 
@@ -634,6 +732,35 @@ letter-spacing: .2rem;
   height: 50rem;
 }
 
-.candlelight-zoomed {
+.zoomed {
   height: 50rem;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation {
+  display: flex;
+  background-color: #1F2833;
+  height: 100rem;
+  width: 100%;
+  color: #EBF4F4;
+  padding: 15rem;
+}
+
+.return { /* used to direct the user back to my home page */
+  position: absolute;
+  inset: 0;
+  margin: 3rem 0 0 51rem;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(90deg);
+  mix-blend-mode: luminosity; /* added a blending mode to make gif black and white */
+}
+
+/* KEYFRAMES */ 
+
+@keyframes fadeIn { 
+  /* keyfames to tell animations to fade into view when the page loads */
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
