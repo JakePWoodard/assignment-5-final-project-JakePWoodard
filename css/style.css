@@ -150,6 +150,7 @@ video.fullscreen {
 }
 
 .headshot {
+  /* used a grid for these images so that they are eventy spaced and easy to swap out if needed */
   display: grid;
 }
 
