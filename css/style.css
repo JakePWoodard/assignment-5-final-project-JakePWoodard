@@ -45,10 +45,7 @@ h3 {
   font-weight: 400;
   font-size: 3rem;
   @media (max-width:480px) {
-    font-size: 1.5rem;
-}
-@media (max-width:768px){
-  font-size: 2rem;
+    font-size: 1.4rem;
 }
 }
 
@@ -213,11 +210,14 @@ video.fullscreen {
   color: #EBF4F4;
   text-align: left;
   padding: 15rem;
-  @media (max-width:768px){
-    padding: 8rem;
-  }
   @media (max-width:480px){
-    padding: 4rem;
+    padding: 2rem;
+  }
+}
+
+.bioSectionType {
+  @media (max-width:480px){
+    margin-top: 4.5rem;
   }
 }
 
@@ -290,7 +290,8 @@ form {
   font-size: 2.125rem;
   letter-spacing: 0.2rem;
   @media (max-width:480px){
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    margin: 2rem 0 2rem 0;
   }
 }
 
@@ -306,6 +307,12 @@ form {
   color: #EBF4F4;
   transform: scale(6);
   font-size: 2.5rem;
+  @media (max-width:480px){
+    text-decoration: none;
+  color: #EBF4F4;
+  transform: scale(0);
+  font-size: 1.3rem;
+  }
 }
 
 svg {
